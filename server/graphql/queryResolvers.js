@@ -14,8 +14,7 @@ const resolvers = {
                 description: description,
                 priority: priority,
             }).save()
-            console.log('new Task saved');
-
+            return newTask
         }
     }
 }
