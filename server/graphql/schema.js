@@ -10,6 +10,7 @@ type Query {
     task(id:ID!): Task
 }
 type Mutation {
-    createTask(title: String!, description: String!, priority: String!): Task
+    createTask(title: String!, description: String!, priority: String!): Task,
+    updateTask(id:String!, title: String!, description: String!, priority: String!): Task
 }
-`
+`;

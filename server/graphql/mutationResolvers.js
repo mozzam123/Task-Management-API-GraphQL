@@ -10,7 +10,15 @@ const mutationResolvers = {
       }).save();
       return newTask;
     },
+    updateTask: async (_, { id, title, description, priority }) => {
+      const updatedTask = await Task.findByIdAndUpdate(id, {
+        title: title,
+        description: description,
+        priority: priority,
+      });
+      return updatedTask;
+    },
   },
 };
 
-export default mutationResolvers
+export default mutationResolvers;
