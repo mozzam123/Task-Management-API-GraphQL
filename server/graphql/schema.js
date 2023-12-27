@@ -12,5 +12,6 @@ type Query {
 type Mutation {
     createTask(title: String!, description: String!, priority: String!): Task,
     updateTask(id:String!, title: String!, description: String!, priority: String!): Task
+    deleteTask(id:String!): Task
 }
 `;

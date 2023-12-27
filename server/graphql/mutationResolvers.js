@@ -18,6 +18,10 @@ const mutationResolvers = {
       });
       return updatedTask;
     },
+    deleteTask: async (_, { id }) => {
+      const deletedTask = await Task.findByIdAndDelete(id)
+      return deletedTask
+    }
   },
 };
 
